@@ -42,5 +42,9 @@ group :development, :test do
     gem 'selenium-webdriver'
     gem 'capybara'
     gem 'rspec'
+    gem 'guard-rspec'
+    gem 'spork-rails'
+    gem 'guard-spork'
+
 end
 
