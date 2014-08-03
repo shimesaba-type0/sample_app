@@ -12,7 +12,7 @@ Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| reuire f}
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
@@ -25,6 +25,8 @@ Spork.prefork do
 
     config.order = "randam"
     config.include Capybara::DSL
+
+    # config.include Rails.application.routes.url_helpers
   end
 end
 
