@@ -26,7 +26,7 @@ Spork.prefork do
     config.order = "randam"
     config.include Capybara::DSL
 
-    # config.include Rails.application.routes.url_helpers
+    config.include Rails.application.routes.url_helpers
   end
 end
 
